@@ -1,0 +1,115 @@
+body{
+    background-color:rgb(218, 214, 214);
+    background-image: url(https://www.transparenttextures.com/patterns/tileable-wood.png);
+}
+
+.hello {font-size: 70pt;
+font-family: 'Parisienne', cursive;
+text-align: center;
+margin-top: -40;}
+
+
+.gamename{
+    text-align: center;
+    font-size: 70pt;
+}
+
+.one{
+    background-color: red;
+    max-width: 960px;
+    margin-top:20;
+    
+}
+
+#guesses{
+    text-align: right;
+}
+
+#start{
+   display: visible;
+}
+
+.two{
+    background-color: red;
+    max-width: 960px;
+}
+
+.two h3{
+    text-align: center;
+    font-size: 20pt;
+}
+
+.hangman{
+   margin:auto;
+}
+
+.hangman h2{
+    text-align: center;
+    font-size: 36pt;
+}
+
+.hangman h4{
+    text-align: center;
+}
+
+.letterbank{
+    margin: auto;
+    text-align: center;
+}
+
+.lettersguessed{
+    text-align: center;
+}
+#flag{
+    display: visible;
+}
+#longhorn{
+    display: none;
+}
+
+#bluebonnet{
+    display:none;
+}
+
+#pecantree{
+    display:none;
+}
+
+#hornedlizard{
+    display: none;
+}
+
+#mockingbird{
+    display: none;
+}
+
+#lonestar{
+    display: none;
+}
+
+#austin{
+    display: none;
+}
+
+#armadillo{
+    display: none;
+}
+
+
+.letterbuttons li{
+    float:left;
+    margin: 0 10px 10px 0;
+    list-style:none;
+    width:35px;
+    height:30px;
+    padding-top:10px;
+    background:white;
+    color:black;
+    cursor:pointer;
+   
+  }
+  
+.letterbuttons li:hover{
+    color: blue;
+}
+
