@@ -96,20 +96,8 @@ margin-top: -40;}
 }
 
 
-.letterbuttons li{
-    float:left;
-    margin: 0 10px 10px 0;
-    list-style:none;
-    width:35px;
-    height:30px;
-    padding-top:10px;
-    background:white;
-    color:black;
-    cursor:pointer;
-   
-  }
-  
-.letterbuttons li:hover{
-    color: blue;
+#blanks{
+    font-size: 36pt;
+    text-align: center;
 }
 

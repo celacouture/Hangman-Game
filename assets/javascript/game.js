@@ -1,57 +1,68 @@
+//Hangman Game 
 
-
+//Global Variables
 //word choices
+var wordBank=['texas', 'longhorn', 'armadillo', 'bluebonnet', 'mockingbird','pecanpie', 'austin'];
+var alphabet=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+var wins= 0;
+var livesLeft=15;
 
-
-var words = ["texas", "longhorn", "armadillo", "pecan-tree", "austin", "the-lone-star-state", "bluebonnet", "mockingbird", "texas-horned-toad"];
-var chooseWord=words[Math.floor(Math.random() * words.length)];
-    console.log(chooseWord);
-var answerBlanks;
+//letters guessed that are not in word
+var lettersUsed=[];
+//the users guess, made by keying letter
 var userGuess;
-var storedGuesses=[];
-var livesLeft=20;
-var wins=0;
+//computer generates a word from the word bank
+var computerPick=wordBank[Math.floor(Math.random()* wordBank.length)];
+console.log(computerPick);
+//computer displays underscores matching number in word
+var underScores=[];
+var s;
+var html;
 
-//the user starts the game, 
-document.onkeyup = function () {
-    var userStart = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(userStart);
+//what the computer needs to do
+//create underscores for word to be guessed
 
-    answerBlanks=document.getElementsByClassName("blanks");
-    correct = document.createElement('ul');
+document.onkeypress=function start (){
+   
+      for (var i = 0; i<computerPick.length; i++)
+       {
+           underScores[i]='_';
+       }
+   
+    s=underScores.join(" ");
+   document.getElementById('blanks').innerHTML = s;
+   
+   document.getElementById('guesses').textContent=livesLeft;
 
-        for (var i=0; i<chooseWord.length; i++){
-            correct.setAttribute('id', 'word');
-            userStart = document.createElement('li');
-            userStart.setAttribute('class', 'userGuess');
-            if (chooseWord[i]==="-"){
-                
+//what the user needs to do
+
+document.onkeyup =function (event)
+{
+    userGuess = event.key;
+
+    if(computerPick.indexOf(userGuess) > -1){
+        for(var i =0; computerPick.length; i ++)
+        {
+            if(computerPick[i] === userGuess)
+            {
+                underScores[i]=userGuess;
             }
-
         }
+    }
+    else
+    {
+        lettersUsed.push(userGuess);
+        livesLeft --;
+        console.log(userGuess);
     }
 }
 
-//the computer picks a word and the blanks are displayed to the document
+//if they win
+ 
 
 
+//if they loose
 
-
-
-//the player quesses a letter, the letter goes into word or into letters guessed section
-
-
-
-//the players wins are tallied
-
-//the number of guesses goes down
-
-//player guesses word picture is revealed
-
-function imgDisplay(){
-    document.getElementById("bluebonnet").style.display="none";
+//reset the game
 }
-
-
-
